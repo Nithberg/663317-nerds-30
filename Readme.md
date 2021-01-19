@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Nick](https://up.htmlacademy.ru/htmlcss/30/user/663317).
-* Наставник: Павел Нюкало.
+* Наставник: [Павел Нюкало](https://htmlacademy.ru/profile/nyukalopavel.
 
 ---
 
