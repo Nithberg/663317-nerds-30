@@ -5,120 +5,134 @@
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс</title>
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="img/icon.svg" type="image/svg+×ml">
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/152.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии Нёрдс"></a>
-      <ul>
-        <li><a>Студия</a></li>
-        <li><a href="#">Клиенты</a></li>
-        <li><a href="catalog.html">Магазин</a></li>
-        <li><a href="#">Контакты</a></li>
+  <header class="main-header header-background">
+    <nav class="main-navigation">
+      <a><img class="main-logo" src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии Нёрдс"></a>
+      <ul class="main-menu">
+        <li class="main-menu__item">
+          <a class="main-menu__link main-menu__link-active">Студия</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="#">Клиенты</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="catalog.html">Магазин</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="#">Контакты</a>
+        </li>
       </ul>
-      <a href="#">Корзина</a>
+      <a class="main-menu__link basket" href="#">Корзина</a>
     </nav>
   </header>
 
   <main>
     <h1>Дизайн-студия Нёрдс</h1>
-    <section>
+    <section class="promo header-background">
       <h2>Промо-слайдер</h2>
-      <p>Долго, дорого, скрупулезно.</p>
-      <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-      <a href="#">Узнать больше</a>
+      <p class="promo__title">Долго, дорого, скрупулезно.</p>
+      <p class="promo__text">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+      <a class="button promo__button" href="#">Узнать больше</a>
 
-      <p>Любим математику как никто другой</p>
-      <p>Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
-      <a href="#">Узнать больше</a>
+      <p class="promo__title">Любим математику как никто другой</p>
+      <p class="promo__text">Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
+      <a class="button promo__button" href="#">Узнать больше</a>
 
-      <p>Только ночь, только хардкор</p>
-      <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-      <a href="#">Узнать больше</a>
+      <p class="promo__title">Только ночь, только хардкор</p>
+      <p class="promo__text">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+      <a class="button promo__button" href="#">Узнать больше</a>
     </section>
-    <section>
+    <section class="services">
       <h2>Услуги студии</h2>
-      <ul>
-        <li>
-          <img src="img/websites.png" width="300" height="146" alt="Картинка с изображением веб-сайта на ноутбуке">
-          <h3>Веб-сайты</h3>
-          <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-          <a href="#">Заказать</a>
+      <ul class="services__list">
+        <li class="services__item">
+          <img class="services__image-red" src="img/websites.png" width="300" height="146" alt="Картинка с изображением веб-сайта на ноутбуке">
+          <h3 class="services__title">Веб-сайты</h3>
+          <p class="services__text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+          <a class="button services__button" href="#">Заказать</a>
         </li>
-        <li>
-          <img src="img/applications.png" width="300" height="146" alt="Картинка с изображением смартфона">
-          <h3>Приложения</h3>
-          <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-          <a href="#">Заказать</a>
+        <li class="services__item">
+          <img class="services__image-green" src="img/applications.png" width="300" height="146" alt="Картинка с изображением смартфона">
+          <h3 class="services__title">Приложения</h3>
+          <p class="services__text">Покорите топ-10 приложений в AppStore и Google Play</p>
+          <a class="button services__button-green" href="#">Заказать</a>
         </li>
-        <li>
-          <img src="img/presentations.png" width="300" height="146" alt="Картинка с изображением презентации">
-          <h3>Презентации</h3>
-          <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-          <a href="#">Заказать</a>
+        <li class="services__item">
+          <img class="services__image-yellow" src="img/presentations.png" width="300" height="146" alt="Картинка с изображением презентации">
+          <h3 class="services__title">Презентации</h3>
+          <p class="services__text">Вы даже не подозреваете, насколько вы изумительны!</p>
+          <a class="button services__button-yellow" href="#">Заказать</a>
         </li>
       </ul>
     </section>
-    <section>
+    <section class="about-us">
       <h2>О нас</h2>
-      <p>Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
-      <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-      <p>Выполняем заказы на разработку:</p>
-      <ul>
-        <li>Веб-сайтов любой сложности</li>
-        <li>Мобильных приложений для iOS и Android</li>
-        <li>Слайдшоу и видео для корпоративных презентаций</li>
+      <p class="about-us__title">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
+      <p class="about-us__text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+      <p class="order">Выполняем заказы на разработку:</p>
+      <ul class="order__list">
+        <li class="order__item">Веб-сайтов любой сложности</li>
+        <li class="order__item">Мобильных приложений для iOS и Android</li>
+        <li class="order__item">Слайдшоу и видео для корпоративных презентаций</li>
       </ul>
     </section>
-    <section>
+    <section class="advantages">
       <h2>Наши преимущества</h2>
-      <img src="img/nerds-illustration-1.jpg" width="360" height="208" alt="Изображение с названием студии - Нёрдс">
-      <p>с 2004 года Любим точность во всем:</p>
-      <table>
-        <tr>
-          <td>146%</td>
-          <td>100%</td>
-          <td>50%</td>
+      <img class="advantages__image" src="img/nerds-illustration-1.jpg" width="360" height="208" alt="Изображение с названием студии - Нёрдс">
+      <p class="advantages__title">с 2004 года Любим точность во всем:</p>
+      <table class="advantages__list">
+        <tr class="advantages__level">
+          <td>146<sup class="advantages__level-percent">%</sup></td>
+          <td>100<sup class="advantages__level-percent">%</sup></td>
+          <td>50<sup class="advantages__level-percent">%</sup></td>
         </tr>
-        <tr>
+        <tr class="advantages__description">
           <td>Уровень самоотдачи</td>
           <td>Соблюдение сроков</td>
           <td>Минимальная предоплата</td>
         </tr>
       </table>
     </section>
-    <section>
+    <section class="partners">
       <h2>Наши партнеры</h2>
-      <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo_academy.svg" width="199" height="68" alt="Html academy"></a>
-      <a href="#"><img src="img/logo_borodinski.png" width="209" height="90" alt="Barbershop Borodinski"></a>
-      <a href="#"><img src="img/logo_pink.png" width="185" height="52" alt="Pink"></a>
-      <a href="#"><img src="img/logo_mishka.png" width="173" height="84" alt="Mishka"></a>
+      <a class="partners__link" href="https://htmlacademy.ru/intensive/htmlcss"><img class="partners__logo" src="img/logo_academy.svg" width="199" height="68" alt="Html academy"></a>
+      <a class="partners__link" href="#"><img class="partners__logo" src="img/logo_borodinski.png" width="209" height="90" alt="Barbershop Borodinski"></a>
+      <a class="partners__link" href="#"><img class="partners__logo" src="img/logo_pink.png" width="185" height="52" alt="Pink"></a>
+      <a class="partners__link" href="#"><img class="partners__logo" src="img/logo_mishka.png" width="173" height="84" alt="Mishka"></a>
     </section>
   </main>
 
-  <footer>
-    <section>
-      <h2>Контакты</h2>
-      <img src="img/map.jpg" width="1440" height="416" alt="Карта с меткой нашего расположения">
-      <p>NЁRDS DESIGN STUDIO</p>
-      <p>191186, Санкт-Петербург,<br>
-        ул. Б. Конюшенная, д. 19/8</p>
-      <p>тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
-      <a href="#">Напишите нам</a>
+  <footer class="main-footer">
+    <section class="map">
+      <h2>Карта местонахождения</h2>
+      <img class="map__image" src="img/map.jpg" width="1440" height="416" alt="Карта с меткой нашего расположения">
     </section>
-    <section>
+    <section class="contacts">
+      <h2>Контакты</h2>
+      <p class="contacts__title">NЁRDS DESIGN STUDIO</p>
+      <p class="contacts__address">191186, Санкт-Петербург,<br>
+        ул. Б. Конюшенная, д. 19/8<br>
+        <a class="contacts__phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+      </p>
+      <a class="button contacts__button" href="#">Напишите нам</a>
+    </section>
+    <section class="social-button">
       <h2>Мы в соцсетях</h2>
-      <ul>
-        <li><a href="#">Вконтакте</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Instagram</a></li>
+      <ul class="social-button__list">
+        <li class="social-button__item"><a class="button social-button__link" href="#">Вконтакте</a></li>
+        <li class="social-button__item"><a class="button social-button__link" href="#">Facebook</a></li>
+        <li class="social-button__item"><a class="button social-button__link" href="#">Instagram</a></li>
       </ul>
     </section>
-    <p>Давайте дружить, это выгодно!</p>
-    <p>Скидка 10% для друзей из социальных сетей.</p>
+    <p class="footer-slogan">Давайте дружить, это выгодно!</p>
+    <p class="footer-discount">Скидка 10% для друзей из социальных сетей.</p>
   </footer>
 </body>
 

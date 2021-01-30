@@ -5,52 +5,62 @@
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс</title>
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="img/icon.svg" type="image/svg+×ml">
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/152.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии Нёрдс"></a>
-      <ul>
-        <li><a href="index.html">Студия</a></li>
-        <li><a href="#">Клиенты</a></li>
-        <li><a>Магазин</a></li>
-        <li><a href="#">Контакты</a></li>
+  <header class="main-header">
+    <nav class="main-navigation">
+      <a class="main-logo" href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии Нёрдс"></a>
+      <ul class="main-menu">
+        <li class="main-menu__item">
+          <a class="main-menu__link">Студия</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="#">Клиенты</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link">Магазин</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="#">Контакты</a>
+        </li>
       </ul>
-      <a href="#">Корзина</a>
+      <a class="basket" href="#">Корзина</a>
     </nav>
   </header>
 
   <main>
     <h1>Магазин готовых шаблонов</h1>
-    <section>
+    <section class="filters">
       <h2>Фильтр сайтов</h2>
-      <form method="GET" action="https://echo.htmlacademy.ru">
+      <form class="filter" method="GET" action="https://echo.htmlacademy.ru">
         <fieldset>
           <legend>Стоимость:</legend>
           <input type="range" name="price" id="price">
           <p>
             <label for="filter-min-price">От</label>
-            <input type="text" name="min-price" id="filter-min-price" placeholder="0">
+            <input class="filter__price" type="text" name="min-price" id="filter-min-price" placeholder="0">
             <label for="filter-max-price">До</label>
-            <input type="text" name="max-price" id="filter-max-price" placeholder="15 000">
+            <input class="filter__price" type="text" name="max-price" id="filter-max-price" placeholder="15 000">
           </p>
         </fieldset>
         <fieldset>
           <legend>Сетка:</legend>
           <ul>
-            <li>
-              <input type="radio" name="group-net" id="filter-net-adaptive" value="net-adaptive" checked>
+            <li class="filter__item">
+              <input class="filter__input filter__radio" type="radio" name="group-net" id="filter-net-adaptive" value="net-adaptive" checked>
               <label for="filter-net-adaptive">Адаптивная</label>
             </li>
-            <li>
-              <input type="radio" name="group-net" id="filter-net-fixed" value="net-fixed">
+            <li class="filter__item">
+              <input class="filter__input filter__radio" type="radio" name="group-net" id="filter-net-fixed" value="net-fixed">
               <label for="filter-net-fixed">Фиксированная</label>
             </li>
-            <li>
-              <input type="radio" name="group-net" id="filter-net-stretch" value="net-stretch">
+            <li class="filter__item">
+              <input class="filter__input filter__radio" type="radio" name="group-net" id="filter-net-stretch" value="net-stretch">
               <label for="filter-net-stretch">Резиновая</label>
             </li>
           </ul>
@@ -58,24 +68,24 @@
         <fieldset>
           <legend>Особенности:</legend>
           <ul>
-            <li>
-              <input type="checkbox" name="slider" id="filter-slider" checked>
+            <li class="filter__item">
+              <input class="filter__input filter__checkbox" type="checkbox" name="slider" id="filter-slider" checked>
               <label for="filter-slider">Слайдер</label>
             </li>
-            <li>
-              <input type="checkbox" name="advantages" id="filter-advantages">
+            <li class="filter__item">
+              <input class="filter__input filter__checkbox" type="checkbox" name="advantages" id="filter-advantages">
               <label for="filter-advantages">Блок преимуществ</label>
             </li>
-            <li>
-              <input type="checkbox" name="news" id="filter-news" checked>
+            <li class="filter__item">
+              <input class="filter__input filter__checkbox" type="checkbox" name="news" id="filter-news" checked>
               <label for="filter-news">Новости</label>
             </li>
-            <li>
-              <input type="checkbox" name="gallery" id="filter-gallery">
+            <li class="filter__item">
+              <input class="filter__input filter__checkbox" type="checkbox" name="gallery" id="filter-gallery">
               <label for="filter-gallery">Галерея</label>
             </li>
-            <li>
-              <input type="checkbox" name="basket" id="filter-basket">
+            <li class="filter__item">
+              <input class="filter__input filter__checkbox" type="checkbox" name="basket" id="filter-basket">
               <label for="filter-basket">Корзина</label>
             </li>
           </ul>
@@ -186,26 +196,30 @@
     </section>
   </main>
 
-  <footer>
-    <section>
-      <h2>Контакты</h2>
-      <img src="img/map.jpg" width="1440" height="416" alt="Карта с меткой нашего расположения">
-      <p>NЁRDS DESIGN STUDIO</p>
-      <p>191186, Санкт-Петербург,<br>
-        ул. Б. Конюшенная, д. 19/8</p>
-      <p>тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
-      <a href="#">Напишите нам</a>
+  <footer class="main-footer">
+    <section class="map">
+      <h2>Карта местонахождения</h2>
+      <img class="map__image" src="img/map.jpg" width="1440" height="416" alt="Карта с меткой нашего расположения">
     </section>
-    <section>
+    <section class="contacts">
+      <h2>Контакты</h2>
+      <p class="contacts__title">NЁRDS DESIGN STUDIO</p>
+      <p class="contacts__address">191186, Санкт-Петербург,<br>
+        ул. Б. Конюшенная, д. 19/8<br>
+        <a class="contacts__phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+      </p>
+      <a class="button contacts__button" href="#">Напишите нам</a>
+    </section>
+    <section class="social-button">
       <h2>Мы в соцсетях</h2>
-      <ul>
-        <li><a href="#">Вконтакте</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Instagram</a></li>
+      <ul class="social-button__list">
+        <li class="social-button__item"><a class="social-button__link" href="#">Вконтакте</a></li>
+        <li class="social-button__item"><a class="social-button__link" href="#">Facebook</a></li>
+        <li class="social-button__item"><a class="social-button__link" href="#">Instagram</a></li>
       </ul>
     </section>
-    <p>Давайте дружить, это выгодно!</p>
-    <p>Скидка 10% для друзей из социальных сетей.</p>
+    <p class="slogan">Давайте дружить, это выгодно!</p>
+    <p class="discount">Скидка 10% для друзей из социальных сетей.</p>
   </footer>
 </body>
 

@@ -1,0 +1,243 @@
+/* Fonts */
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto.woff2") format("woff2"),
+    url("../fonts/roboto.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Medium";
+  src: url("../fonts/robotomedium.woff2") format("woff2"),
+    url("../fonts/robotomedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("../fonts/robotobold.woff2") format("woff2"),
+    url("../fonts/robotobold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Variables */
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-white-extra: rgba(255, 255, 255, 0.3);
+  --color-grey: #eeeeee;
+
+  --color-dark-grey: #283136;
+  --color-dark-grey-special: #444444;
+
+  --color-grey-extra: #666666;
+
+  --color-grey-social-button: #e1e1e1;
+
+  --color-grey-button-focus: #dfdfdf;
+  --color-grey-button-press: #d5d5d5;
+
+  --color-grey-input: #d7dcde;
+  --color-grey-input-focus: #b4b9bb;
+
+  --color-red: #fb565a;
+  --color-red-extra: #e74246;
+  --color-red-special: #d7373b;
+  --color-green: #00ca74;
+  --color-green-extra: #00bc6c;
+  --color-green-special: #00aa62;
+  --color-yellow: #efc84a;
+  --color-yellow-extra: #eab534;
+  --color-yellow-special: #e5a722;
+}
+
+/* Global */
+body {
+  min-width: 1160px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-dark-grey);
+  background-color: var(--color-white);
+}
+a {
+  text-decoration: none;
+}
+.button {
+  font-family: "Roboto Medium", "Arial", sans-serif;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-white);
+  background-color: var(--color-red);
+  border-radius: 3px;
+}
+.button:hover {
+  background-color: var(--color-red-extra);
+}
+.button:active {
+  background-color: var(--color-red-special);
+  color: var(--color-white-extra);
+}
+
+/* Main header */
+.header-background {
+  background-color: var(--color-grey);
+}
+
+/* Main navigation */
+.main-logo:active {
+  opacity: 0.3;
+}
+.main-navigation {
+  font-family: "Roboto Medium", "Arial", sans-serif;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+.main-menu {
+  list-style: none;
+}
+.main-menu__link {
+  color: var(--color-black);
+}
+.main-menu__link:hover {
+  color: var(--color-red);
+}
+.main-menu__link:active {
+  color: var(--color-black);
+  opacity: 0.3;
+}
+
+/* Promo */
+.promo__title {
+  font-family: "Roboto Medium", "Arial", sans-serif;
+  font-size: 55px;
+  line-height: 55px;
+  color: var(--color-black);
+}
+
+/* Services */
+.services__list {
+  list-style: none;
+}
+.services__image-red {
+  background-color: var(--color-red);
+}
+.services__image-green {
+  background-color: var(--color-green);
+}
+.services__image-yellow {
+  background-color: var(--color-yellow);
+}
+.services__title {
+  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+.services__button-green {
+  background-color: var(--color-green);
+}
+.services__button-green:hover {
+  background-color: var(--color-green-extra);
+}
+.services__button-green:active {
+  background-color: var(--color-green-special);
+}
+.services__button-yellow {
+  background-color: var(--color-yellow);
+}
+.services__button-yellow:hover {
+  background-color: var(--color-yellow-extra);
+}
+.services__button-yellow:active {
+  background-color: var(--color-yellow-special);
+}
+
+/* About-us */
+.about-us__title {
+  font-family: "Roboto Medium", "Arial", sans-serif;
+  font-size: 45px;
+  line-height: 45px;
+  color: var(--color-black);
+}
+.order {
+  font-family: "Roboto Bold", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+.order__list {
+  list-style: none;
+}
+
+/* Advantages */
+.advantages__title {
+  font-family: "Roboto Bold", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+.advantages__level {
+  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-size: 45px;
+  line-height: 64px;
+  color: var(--color-black);
+}
+.advantages__level-percent {
+  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-size: 26px;
+  line-height: 40px;
+  color: var(--color-black);
+}
+.advantages__description {
+  line-height: 18px;
+}
+
+/* Partners */
+.partners__logo {
+  opacity: 0.2;
+}
+.partners__logo:hover {
+  opacity: 1;
+}
+.partners__logo:active {
+  opacity: 0.1;
+}
+
+/* Contacts */
+.contacts__title {
+  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+.contacts__address {
+  font-family: "Roboto", "Arial", sans-serif;
+  line-height: 18px;
+  color: var(--color-grey-extra);
+}
+.contacts__phone {
+  color: var(--color-grey-extra);
+}
+
+/* Social buttons */
+.social-button__list {
+  list-style: none;
+}
+.social-button__link {
+  background-color: var(--color-grey-social-button);
+  color: var(--color-white);
+}
+.footer-slogan {
+  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--color-black);
+}
+.footer-discount {
+  line-height: 22px;
+  color: var(--color-dark-grey-special);
+}
