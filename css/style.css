@@ -24,6 +24,7 @@
 /* Variables */
 :root {
   --color-black: #000000;
+  --color-black-extra: rgba(0, 0, 0, 0.3);
   --color-white: #ffffff;
   --color-white-extra: rgba(255, 255, 255, 0.3);
   --color-grey: #eeeeee;
@@ -37,6 +38,8 @@
 
   --color-grey-button-focus: #dfdfdf;
   --color-grey-button-press: #d5d5d5;
+
+  --color-grey-panagination-active-border: #dbdbdb;
 
   --color-grey-input: #d7dcde;
   --color-grey-input-focus: #b4b9bb;
@@ -198,6 +201,111 @@ a {
   opacity: 0.1;
 }
 
+/* Catalog */
+.catalog-title {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+/* Filters */
+.filter legend {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+.filter label[for="filter-min-price"],
+.filter label[for="filter-max-price"] {
+  line-height: 22px;
+  text-transform: uppercase;
+}
+.filter__price {
+  line-height: 22px;
+  text-align: center;
+  background-color: var(--color-grey);
+  border-radius: 3px;
+  border: 0;
+}
+.filter ul {
+  list-style: none;
+}
+.filter__item {
+  line-height: 19px;
+}
+.button--grey {
+  border: 0;
+  color: var(--color-black);
+  background-color: var(--color-grey);
+}
+.button--grey:hover {
+  background-color: var(--color-grey-button-focus);
+}
+.button--grey:active {
+  background-color: var(--color-grey-button-press);
+  color: var(--color-black-extra);
+}
+
+/* Catalog-templates */
+.catalog-templates__sort {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+.sort-list {
+  list-style: none;
+}
+.sort-list a {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--color-black);
+  opacity: 0.3;
+}
+.sort-list a:hover {
+  opacity: 0.6;
+}
+.sort-list .sort-list__link--active,
+.sort-list a:active {
+  opacity: 1;
+  color: var(--color-black);
+}
+.templates-list {
+  list-style: none;
+}
+.templates-list h3 {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+.templates-list h3:hover {
+  color: var(--color-red);
+}
+.templates-list h3:active {
+  color: var(--color-black);
+  opacity: 0.3;
+}
+.templates-list p {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--color-grey-extra);
+}
+.button--template,
+.button--template:hover,
+.button--template:active {
+  color: var(--color-white);
+  border: 0;
+}
+.panagination__item--active{
+  background-color: var(--color-white);
+  border: 3px solid var(--color-grey-panagination-active-border);
+}
 /* Contacts */
 .contacts__title {
   font-size: 18px;
