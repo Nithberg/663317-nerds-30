@@ -207,6 +207,8 @@ a {
   line-height: 55px;
   font-weight: 500;
   color: var(--color-black);
+  text-align: center;
+  background-color: var(--color-grey);
 }
 
 /* Filters */
