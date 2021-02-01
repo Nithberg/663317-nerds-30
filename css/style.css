@@ -219,8 +219,7 @@ a {
   text-transform: uppercase;
   color: var(--color-black);
 }
-.filter__price--min,
-.filter__price--max {
+.filter__price-label {
   line-height: 22px;
   text-transform: uppercase;
 }
@@ -237,15 +236,15 @@ a {
 .filter__item {
   line-height: 19px;
 }
-.button--grey {
+.filter-button {
   border: 0;
   color: var(--color-black);
   background-color: var(--color-grey);
 }
-.button--grey:hover {
+.filter-button:hover {
   background-color: var(--color-grey-button-focus);
 }
-.button--grey:active {
+.filter-button:active {
   background-color: var(--color-grey-button-press);
   color: var(--color-black-extra);
 }
@@ -298,9 +297,9 @@ a {
   line-height: 18px;
   color: var(--color-grey-extra);
 }
-.button--template,
-.button--template:hover,
-.button--template:active {
+.button-template,
+.button-template:hover,
+.button-template:active {
   color: var(--color-white);
   border: 0;
 }
@@ -308,6 +307,18 @@ a {
   background-color: var(--color-white);
   border: 3px solid var(--color-grey-panagination-active-border);
 }
+.panagination__button{
+  color: var(--color-black);
+  background-color: var(--color-grey);
+}
+.panagination__button:hover{
+  background-color: var(--color-grey-button-focus);
+}
+.panagination__button:active{
+  background-color: var(--color-grey-button-press);
+  color: var(--color-black-extra);
+}
+
 /* Contacts */
 .contacts__title {
   font-size: 18px;
