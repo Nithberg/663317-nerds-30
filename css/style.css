@@ -219,8 +219,8 @@ a {
   text-transform: uppercase;
   color: var(--color-black);
 }
-.filter label[for="filter-min-price"],
-.filter label[for="filter-max-price"] {
+.filter__price--min,
+.filter__price--max {
   line-height: 22px;
   text-transform: uppercase;
 }
