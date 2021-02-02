@@ -56,6 +56,17 @@
 }
 
 /* Global */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 body {
   min-width: 1160px;
   margin: 0;
@@ -126,9 +137,6 @@ a {
 .main-navigation-wrapper {
   display: grid;
   grid-template-columns: min-content 1fr min-content;
-  width: 1160px;
-  margin: 0 auto;
-  padding: 0;
 }
 .main-menu {
   list-style: none;
@@ -158,16 +166,13 @@ a {
 .promo-background {
   background-color: var(--color-grey);
 }
-.promo-wrapper {
-  width: 1160px;
-  margin: 0 auto;
-  padding: 0;
-}
 .promo__title {
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
   color: var(--color-black);
+  margin: 0;
+  padding: 0;
 }
 
 /* Services */
@@ -390,15 +395,12 @@ a {
   color: var(--color-black-extra);
 }
 /* Footer */
-.footer-wrapper {
-  width: 1160px;
-  margin: 0 auto;
-  padding: 0;
-}
-
 /* Map */
 .map {
   text-align: center;
+}
+.map__image {
+  width: 100%;
 }
 /* Contacts */
 .contacts__title {
