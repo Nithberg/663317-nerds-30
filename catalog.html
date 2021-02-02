@@ -14,29 +14,32 @@
 <body>
   <header class="main-header header-background">
     <nav class="main-navigation">
-      <a class="main-logo" href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии Нёрдс"></a>
-      <ul class="main-menu">
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="index.html">Студия</a>
-        </li>
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="#">Клиенты</a>
-        </li>
-        <li class="main-menu__item">
-          <a class="main-menu__link">Магазин</a>
-        </li>
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="#">Контакты</a>
-        </li>
-      </ul>
-      <a class="main-menu__link basket" href="#">Корзина</a>
+      <div class="main-navigation-wrapper container">
+        <a href="index.html"><img class="main-logo" src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии Нёрдс"></a>
+        <ul class="main-menu">
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="index.html">Студия</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="#">Клиенты</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link main-menu__link--active">Магазин</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+        <a class="main-menu__link basket" href="#">Корзина</a>
+      </div>
     </nav>
   </header>
 
   <main>
     <h1 class="catalog-title">Магазин готовых шаблонов</h1>
+    <div class="catalog-wrapper container">
     <section class="filters">
-      <h2>Фильтр сайтов</h2>
+      <h2 class="visually-hidden">Фильтр сайтов</h2>
       <form class="filter" method="GET" action="https://echo.htmlacademy.ru">
         <fieldset>
           <legend>Стоимость:</legend>
@@ -94,7 +97,7 @@
       </form>
     </section>
     <section class="catalog-templates">
-      <h2>Список шаблонов</h2>
+      <h2 class="visually-hidden">Список шаблонов</h2>
       <p class="catalog-templates__sort">Сортировать:</p>
       <ul class="sort-list">
         <li>
@@ -194,32 +197,47 @@
         </li>
       </ul>
     </section>
+  </div>
   </main>
 
   <footer class="main-footer">
     <section class="map">
-      <h2>Карта местонахождения</h2>
+      <h2 class="visually-hidden">Карта местонахождения</h2>
       <img class="map__image" src="img/map.jpg" width="1440" height="416" alt="Карта с меткой нашего расположения">
     </section>
-    <section class="contacts">
-      <h2>Контакты</h2>
-      <p class="contacts__title">NЁRDS DESIGN STUDIO</p>
-      <p class="contacts__address">191186, Санкт-Петербург,<br>
-        ул. Б. Конюшенная, д. 19/8<br>
-        <a class="contacts__phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-      </p>
-      <a class="button contacts__button" href="#">Напишите нам</a>
-    </section>
-    <section class="social-button">
-      <h2>Мы в соцсетях</h2>
-      <ul class="social-button__list">
-        <li class="social-button__item"><a class="button social-button__link" href="#">Вконтакте</a></li>
-        <li class="social-button__item"><a class="button social-button__link" href="#">Facebook</a></li>
-        <li class="social-button__item"><a class="button social-button__link" href="#">Instagram</a></li>
-      </ul>
-    </section>
-    <p class="footer-slogan">Давайте дружить, это выгодно!</p>
-    <p class="footer-discount">Скидка 10% для друзей из социальных сетей.</p>
+    <div class="container">
+      <section class="contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <p class="contacts__title">NЁRDS DESIGN STUDIO</p>
+        <p class="contacts__address">
+          191186, Санкт-Петербург,<br>
+          ул. Б. Конюшенная, д. 19/8<br>
+          <a class="contacts__phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+        </p>
+        <a class="button contacts__button" href="#">Напишите нам</a>
+      </section>
+      <div class="social-wrapper">
+        <section class="social-button">
+          <h2 class="visually-hidden">Мы в соцсетях</h2>
+          <ul class="social-button__list">
+            <li class="social-button__item">
+              <a class="button social-button__link" href="#">Вконтакте</a>
+            </li>
+            <li class="social-button__item">
+              <a class="button social-button__link" href="#">Facebook</a>
+            </li>
+            <li class="social-button__item">
+              <a class="button social-button__link" href="#">Instagram</a>
+            </li>
+          </ul>
+        </section>
+        <section class="discount-info">
+          <h2 class="visually-hidden">Скидки</h2>
+          <p class="discount-info__slogan">Давайте дружить, это выгодно!</p>
+          <p class="discount-info__text">Скидка 10% для друзей из социальных сетей.</p>
+        </section>
+      </div>
+    </div>
   </footer>
 </body>
 
