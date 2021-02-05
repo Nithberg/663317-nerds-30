@@ -85,6 +85,7 @@ a {
   text-decoration: none;
 }
 .button {
+  display: block;
   line-height: 18px;
   font-weight: 500;
   text-transform: uppercase;
@@ -94,6 +95,7 @@ a {
   border-radius: 3px;
   padding-top: 17px;
   padding-bottom: 15px;
+  word-break:break-all;
 }
 .button:hover {
   background-color: var(--color-red-extra);
@@ -146,6 +148,8 @@ a {
 .main-menu {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  width: 437px;
   list-style: none;
   margin: 0 auto;
   padding: 0;
@@ -174,13 +178,16 @@ a {
 
 /* Promo */
 .promo {
-  padding-bottom: 91px;
+  padding-bottom: 80px;
 }
 .promo-background {
   background-color: var(--color-grey);
 }
-.promo__slide-2,
-.promo__slide-3 {
+.promo__slide{
+  width: 560px;
+}
+.promo__slide--second,
+.promo__slide--third {
   display: none;
 }
 .promo__title {
@@ -192,12 +199,13 @@ a {
   padding: 0;
 }
 .promo__text {
-  margin-bottom: 53px;
-  margin-top: 25px;
+    margin-top: 25px;
+    margin-bottom: 40px;
 }
 .promo__button {
-  padding-right: 54px;
-  padding-left: 54px;
+  padding-right: 50px;
+  padding-left: 50px;
+  width: 140px;
 }
 
 /* Services */
@@ -207,12 +215,15 @@ a {
 }
 .services__list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 300px;
+  grid-template-columns: 300px 300px 300px;
   column-gap: 100px;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+.services__item{
+  display: flex;
+flex-direction: column;
 }
 .services__title {
   font-size: 24px;
@@ -220,20 +231,19 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--color-black);
-  margin-top: 18px;
+  margin-top: 26px;
   margin-bottom: 0px;
 }
 .services__text {
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 .services__button {
   padding-right: 40px;
   padding-left: 40px;
+  width: 81px;
 }
 .services__button--green {
   background-color: var(--color-green);
-  padding-right: 40px;
-  padding-left: 40px;
 }
 .services__button--green:hover {
   background-color: var(--color-green-extra);
@@ -243,8 +253,6 @@ a {
 }
 .services__button--yellow {
   background-color: var(--color-yellow);
-  padding-right: 40px;
-  padding-left: 40px;
 }
 .services__button--yellow:hover {
   background-color: var(--color-yellow-extra);
@@ -502,6 +510,11 @@ a {
 .contacts__phone {
   color: var(--color-grey-extra);
 }
+.contacts__button{
+  padding-right: 44px;
+  padding-left: 44px;
+  width: 131px;
+}
 
 /* Social buttons */
 .social-wrapper {
@@ -519,6 +532,12 @@ a {
   margin: 0;
   padding: 0;
 }
+.social-button li{
+  margin-right: 9px;
+}
+.social-button li:last-child {
+  margin-right: 0;
+}
 .social-button__item {
   display: flex;
   align-items: center;
@@ -527,18 +546,13 @@ a {
   width: 81px;
   height: 81px;
   border-radius: 50%;
-  margin-right: 9px;
   padding: 0;
 }
-.social-button__item:last-child {
-  margin-right: 0;
-}
+
 .social-button__item:active svg {
   opacity: 0.3;
 }
-.social-button__link {
-  text-align: center;
-}
+
 
 /* Discount info */
 .discount-info__slogan {
