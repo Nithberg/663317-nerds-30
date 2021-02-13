@@ -227,6 +227,12 @@ a {
 .promo__slide--first {
   background-image: url("../img/nerds-index-slide1.png");
 }
+.promo__slide--second {
+  background-image: url("../img/nerds-index-slide2.png");
+}
+.promo__slide--third {
+  background-image: url("../img/nerds-index-slide3.png");
+}
 .promo__slide--first > .promo__text {
   margin: 0;
   margin-top: 24px;
@@ -472,6 +478,7 @@ a {
 }
 .catalog-title {
   margin: 0;
+  padding-top: 68px;
   padding-bottom: 108px;
   font-size: 55px;
   line-height: 55px;
