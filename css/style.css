@@ -459,6 +459,9 @@ a {
   background-color: var(--color-grey);
   transform: translateY(-50%);
 }
+.partners__link{
+  display: block;
+}
 .partners__logo {
   opacity: 0.2;
 }
@@ -664,15 +667,7 @@ a {
   border-radius: 0 0 5px 5px;
   z-index: 999;
 }
-.templates-list__item:first-child .template-info {
-  display: block;
-}
-.templates-list__item:first-child::before {
-  opacity: 1;
-}
-.templates-list__item:first-child {
-  box-shadow: 0px 6px 15px var(--color-shadow);
-}
+
 .templates-list h3 {
   margin: 0;
   margin-bottom: 12px;
