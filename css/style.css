@@ -178,8 +178,7 @@ a {
   color: var(--color-red);
 }
 .main-menu__link:active {
-  color: var(--color-black);
-  opacity: 0.3;
+  color: var(--color-black-extra);
 }
 .main-menu__link--basket {
   position: relative;
@@ -197,6 +196,10 @@ a {
   height: 15px;
   background-image: url("../img/cart-icon.svg");
   background-repeat: no-repeat;
+
+}
+.main-menu__link--basket:active::before{
+  opacity: 1;
 }
 
 /* Promo */
