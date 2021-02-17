@@ -8,7 +8,7 @@
   <link rel="icon" href="img/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon_152.png">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -220,7 +220,29 @@
         </section>
       </div>
     </div>
+    <section class="modal">
+      <h2 class="modal__title">Напишите нам</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <div class="modal__form">
+          <div class="modal__info">
+            <label class="modal__text" for="client-name">Ваше имя:</label>
+            <input type="text" name="name" id="client-name" placeholder="Имя Фамилия">
+          </div>
+          <div class="modal__info">
+            <label class="modal__text" for="client-email">Ваш email:</label>
+            <input type="email" name="email" id="client-email" placeholder="email@example.com">
+          </div>
+          <div>
+            <label class="modal__text" for="client-message">Текст письма:</label>
+            <textarea name="message" id="client-message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+          </div>
+        </div>
+        <button class="button modal__button" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    </section>
   </footer>
+
 </body>
 
 </html>
