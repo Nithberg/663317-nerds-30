@@ -147,7 +147,8 @@ a {
 .main-logo {
   width: 160px;
 }
-.main-logo:hover {
+.main-logo:hover,
+.main-logo:focus {
   opacity: 0.7;
 }
 .main-logo:active {
@@ -508,13 +509,14 @@ a {
 .partners__link {
   display: block;
 }
-.partners__logo {
+.partners__link {
   opacity: 0.2;
 }
-.partners__logo:hover {
+.partners__link:hover,
+.partners__link:focus {
   opacity: 1;
 }
-.partners__logo:active {
+.partners__link:active {
   opacity: 0.1;
 }
 
