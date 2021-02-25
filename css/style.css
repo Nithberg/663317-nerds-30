@@ -112,6 +112,8 @@ a {
 .button:active {
   color: var(--color-white-extra);
   background-color: var(--color-red-special);
+  -webkit-box-shadow: inset 0px 3px 0px var(--color-black-extra-border);
+  box-shadow: inset 0px 3px 0px var(--color-black-extra-border);
 }
 
 /* Grid */
@@ -221,11 +223,15 @@ a {
   position: relative;
   background-color: var(--color-grey);
 }
-
+.promo__slide--first,
 .promo__slide--second,
 .promo__slide--third {
   display: none;
 }
+.active{
+  display: block;
+}
+
 .promo__title {
   width: 538px;
   margin: 0;
@@ -298,6 +304,7 @@ a {
   border-radius: 50%;
   cursor: pointer;
 }
+
 .slide-controll__button--active::after {
   position: absolute;
   content: "";
@@ -710,8 +717,6 @@ a {
 .filter-button:active {
   color: var(--color-black-extra);
   background-color: var(--color-grey-button-press);
-  -webkit-box-shadow: inset 0px 3px 0px var(--color-black-extra-border);
-  box-shadow: inset 0px 3px 0px var(--color-black-extra-border);
 }
 
 /* Catalog-templates */
@@ -909,8 +914,6 @@ a {
 .pagination__button:active {
   color: var(--color-black-extra);
   background-color: var(--color-grey-button-press);
-  -webkit-box-shadow: inset 0px 3px 0px var(--color-black-extra-border);
-  box-shadow: inset 0px 3px 0px var(--color-black-extra-border);
 }
 .pagination__link--active {
   background-color: var(--color-white);
@@ -1046,6 +1049,9 @@ a {
   -webkit-box-shadow: 0px 20px 40px var(--color-black-extra);
   box-shadow: 0px 20px 40px var(--color-black-extra);
   z-index: 20;
+}
+.modal-show{
+  display: block;
 }
 .modal__title {
   position: relative;

@@ -8,7 +8,8 @@
   <link rel="icon" href="img/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon_152.png">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -42,7 +43,7 @@
     <section class="promo">
 
       <h2 class="visually-hidden">Промо-слайдер</h2>
-      <div class="container promo__slide promo__slide--first">
+      <div class="container promo__slide promo__slide--first active">
         <p class="promo__title">Долго, дорого,<br>скрупулезно.</p>
         <p class="promo__text">
           Математически выверенный дизайн<br>для вашего сайта или мобильного
@@ -67,9 +68,9 @@
         <a class="button promo__button" href="#">Узнать больше</a>
       </div>
       <div class="slide-controll">
-        <button class="slide-controll__button slide-controll__button--active" type="button" aria-label="Первый слайд"></button>
-        <button class="slide-controll__button" type="button" aria-label="Второй слайд"></button>
-        <button class="slide-controll__button" type="button" aria-label="Третий слайд"></button>
+        <button class="slide-controll__button first slide-controll__button--active" type="button" aria-label="Первый слайд"></button>
+        <button class="slide-controll__button second" type="button" aria-label="Второй слайд"></button>
+        <button class="slide-controll__button third" type="button" aria-label="Третий слайд"></button>
       </div>
 
     </section>
@@ -241,7 +242,7 @@
     </form>
     <button class="modal-close" type="button" aria-label="Закрыть всплывающее окно"></button>
   </section>
-
+  <script src="js/script.js"></script>
 </body>
 
 </html>
