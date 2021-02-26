@@ -56,19 +56,25 @@ const form = modal.querySelector("form");
 const name = modal.querySelector("[name=name]");
 const email = modal.querySelector("[name=email]");
 const message = modal.querySelector("[name=message]");
-const save_name = localStorage.getItem("name");
-const save_email = localStorage.getItem("email");
+
+let isStorageSupport = true;
+let save_name = "";
+let save_email = "";
+
+try {
+  save_name = localStorage.getItem("name");
+  save_email = localStorage.getItem("email");
+} catch (err) {
+  isStorageSupport = false;
+}
 
 // Show modal on button click with animation
 contact_btn.addEventListener("click", function (evt) {
   evt.preventDefault();
   modal.classList.add("modal-show");
-  modal.classList.add("animate__bounce");
-  name.focus();
-  if (name.value) {
-    email.focus();
-  }
-  if (email.value) {
+  if (save_name && save_email) {
+    name.value = save_name;
+    email.value = save_email;
     message.focus();
   }
 });
@@ -77,32 +83,30 @@ contact_btn.addEventListener("click", function (evt) {
 modal_close.addEventListener("click", function (evt) {
   evt.preventDefault();
   modal.classList.remove("modal-show");
-  modal.classList.remove("animate__bounce");
+  modal.classList.remove("modal-error");
 });
 
 // Send form with check required
 form.addEventListener("submit", function (evt) {
   if (!name.value || !email.value || !message.value) {
     evt.preventDefault();
-    alert("Заполнены не все поля");
+    modal.classList.remove("modal-error");
+    modal.offsetWidth = modal.offsetWidth;
+    modal.classList.add("modal-error");
   } else {
-    modal.classList.remove("modal-show");
-    localStorage.clear("name");
-    localStorage.clear("email");
+    if (isStorageSupport) {
+      localStorage.setItem("name", name.value);
+      localStorage.setItem("email", email.value);
+    }
   }
 });
 
-// Use localStorage
-if (save_name) {
-  name.value = save_name;
-}
-name.addEventListener("keyup", function () {
-  localStorage.setItem("name", name.value);
-});
-
-if (save_email) {
-  email.value = save_email;
-}
-email.addEventListener("keyup", function () {
-  localStorage.setItem("email", email.value);
+// Close form using ESC
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (modal.classList.contains("modal-show")) {
+      evt.preventDefault();
+      modal.classList.remove("modal-show");
+    }
+  }
 });
