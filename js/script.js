@@ -68,6 +68,10 @@ try {
   isStorageSupport = false;
 }
 
+function close_modal() {
+  modal.classList.remove("modal-show");
+  modal.classList.remove("modal-error");
+}
 // Show modal on button click with animation
 contact_btn.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -77,13 +81,15 @@ contact_btn.addEventListener("click", function (evt) {
     email.value = save_email;
     message.focus();
   }
+  else {
+    name.focus();
+  }
 });
 
 // Close modal
 modal_close.addEventListener("click", function (evt) {
   evt.preventDefault();
-  modal.classList.remove("modal-show");
-  modal.classList.remove("modal-error");
+  close_modal();
 });
 
 // Send form with check required
@@ -97,6 +103,7 @@ form.addEventListener("submit", function (evt) {
     if (isStorageSupport) {
       localStorage.setItem("name", name.value);
       localStorage.setItem("email", email.value);
+      close_modal();
     }
   }
 });
@@ -106,7 +113,7 @@ window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     if (modal.classList.contains("modal-show")) {
       evt.preventDefault();
-      modal.classList.remove("modal-show");
+      close_modal();
     }
   }
 });
