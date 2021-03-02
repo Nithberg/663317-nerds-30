@@ -14,7 +14,7 @@ ymaps.ready(init);
                 hintContent: "Россия, Санкт-Петербург, Большая Конюшенная улица, 19/8"
             }, {
                     iconLayout: 'default#image',
-                    iconImageHref: './img/map_marker.png',
+                    iconImageHref: "img/map_marker.png",
                     iconImageSize: [231, 190],
                     iconImageOffset: [-50, -170]
                 });
