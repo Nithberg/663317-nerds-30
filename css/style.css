@@ -1,4 +1,3 @@
-/* Fonts */
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/roboto.woff2") format("woff2"),
@@ -928,7 +927,13 @@ a {
 
 /* Map */
 .map {
+  position: relative;
   text-align: center;
+}
+.map-live {
+  position: absolute;
+  width: 100%;
+  height: 416px;
 }
 .map__image {
   width: 100%;

@@ -49,8 +49,8 @@
               <div class="range__scale">
                 <div class="range__bar"></div>
               </div>
-              <div class="range__toggle range__toggle--min" tabindex="0" aria-label="Уменьшить стоимость"></div>
-              <div class="range__toggle range__toggle--max" tabindex="0" aria-label="Увеличить стоимость"></div>
+              <div class="range__toggle range__toggle--min" tabindex="0"></div>
+              <div class="range__toggle range__toggle--max" tabindex="0"></div>
             </div>
             <p>
               <label class="filter__price-label" for="filter-min-price">От</label>
@@ -221,6 +221,7 @@
   <footer class="main-footer">
     <section class="map">
       <h2 class="visually-hidden">Карта местонахождения</h2>
+      <div id="map-config" class="map-live"></div>
       <img class="map__image" src="img/map.jpg" width="1440" height="416" alt="Карта с меткой нашего расположения">
     </section>
     <div class="container">
@@ -293,6 +294,8 @@
     <button class="modal-close" type="button" aria-label="Закрыть всплывающее окно"></button>
   </section>
   <script src="js/script.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="js/map.min.js"></script>
 </body>
 
 </html>
