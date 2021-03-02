@@ -1,3 +1,4 @@
+/* Fonts */
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/roboto.woff2") format("woff2"),
@@ -465,7 +466,7 @@ a {
 .partners {
   position: relative;
   margin-top: 46px;
-  margin-bottom: 118px;
+  margin-bottom: 122px;
 }
 .partners::before {
   position: absolute;
@@ -500,7 +501,7 @@ a {
 .partners__item {
   position: relative;
 }
-.partners__item:not(:nth-child(4n)):after {
+.partners__item:not(:nth-child(4n))::after {
   position: absolute;
   content: "";
   top: 50%;
@@ -514,8 +515,6 @@ a {
 }
 .partners__link {
   display: block;
-}
-.partners__link {
   opacity: 0.2;
 }
 .partners__link:hover,
@@ -555,31 +554,26 @@ a {
 }
 .filter fieldset {
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
   border: 0;
 }
+.filter fieldset:first-child {
+  margin-bottom: 37px;
+}
 .filter legend {
+  margin-bottom: 20px;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--color-black);
 }
-.filter fieldset:nth-child(1) legend {
-  padding-bottom: 48px;
-}
-.filter fieldset:nth-child(2) legend {
-  padding-top: 37px;
-  padding-bottom: 16px;
-}
-.filter fieldset:nth-child(3) legend {
-  padding-top: 25px;
-  padding-bottom: 16px;
-}
 .range {
   position: relative;
   width: 220px;
   height: 40px;
+  margin-top: 26px;
   padding-top: 39px;
   padding-right: 20px;
   padding-left: 20px;
@@ -832,7 +826,6 @@ a {
   min-height: 231px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  vertical-align: bottom;
   padding: 26px 52px 44px 52px;
   text-align: center;
   background-color: var(--color-grey);
@@ -928,7 +921,9 @@ a {
 /* Map */
 .map {
   position: relative;
+  height: 416px;
   text-align: center;
+  background-color: var(--color-grey);
 }
 .map-live {
   position: absolute;
@@ -943,7 +938,7 @@ a {
 .contacts {
   position: absolute;
   top: 0;
-  margin-top: 55px;
+  margin-top: 52px;
   padding: 50px;
   background-color: var(--color-white);
 }
@@ -976,7 +971,7 @@ a {
   display: grid;
   -ms-grid-columns: 1fr 2fr;
   grid-template-columns: 1fr 2fr;
-  margin-top: 60px;
+  margin-top: 67px;
   margin-bottom: 68px;
 }
 .social-button {
